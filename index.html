@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+ <head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>FriendlyLocation</title>
+  <style>
+	  body {
+		background-image: url(https://images.wallpaperscraft.com/image/night_city_skyline_city_lights_135202_1280x720.jpg);
+		background-color: #c7b39b
+		background-repeat:no-repeat;
+		background-size:cover
+		background-position: center
+		height: 100%;
+		}
+   #centerLayer {
+    position: absolute;
+    width: 280px;
+    height: 180px;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -100px;
+    background: #fc0;
+    border: solid 1px black;
+    padding: 10px;
+    overflow: auto;
+   }
+
+  </style>
+ </head>
+ <body>
+  <div id="centerLayer">
+    <form action="/find_account" method="post">
+        <input name="account" placeholder="Account" type="text"/>
+        <input type="submit" value="Locate Friends"/>
+    </form>
+	<br>
+	<img src="https://images.wallpaperscraft.com/image/hands_couple_touch_135353_960x544.jpg" alt="Couple" style="width:263px;height:130px;">
+  </div>
+ </body>
+</html>
