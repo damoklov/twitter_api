@@ -1,6 +1,6 @@
 # twitter_api
 Server-hosted app for finding Twitter user friends' location and put them on a map.\
-Visit my hosted website manually by searching: `damoklov.pythonanywhere.com`
+Visit my hosted website manually by searching: `damoklov.pythonanywhere.com`\
 My project is kindly hosted at __Pythonanywhere.com__ and I try to keep it running!\
 https://goo.gl/oLY4G4
 
