@@ -16,6 +16,11 @@ ctx.verify_mode = ssl.CERT_NONE
 
 
 def main_account_info():
+	"""
+	Reads main info about people from JSON file (name, location, and profile icon).
+	
+	None -> set
+	"""
 	f = open('account.txt', 'r', encoding='utf-8', errors='ignore')
 	acct = f.readline()
 	#acct = input('Enter Twitter Account:')
@@ -37,6 +42,11 @@ def main_account_info():
 
 
 def find_coordinates(name_location_icon_set):
+	"""
+	Converts inline location for each person into latitude and longitude.
+	
+	set -> set
+	"""
 	name_coordinates_icon_set = set()
 	geolocator = Nominatim(user_agent='FriendlyLocation', timeout=None)
 	geocode = RateLimiter(geolocator.geocode,
@@ -54,6 +64,11 @@ def find_coordinates(name_location_icon_set):
 
 
 def build_map(name_coordinates_icon_set):
+	"""
+	Generates map based on location of scanned people.
+	
+	set -> None
+	"""
 	mymap = folium.Map(tiles='Mapbox Bright', zoom_start=13)
 	fg_friends_location = folium.FeatureGroup(name='FriendlyLocation')
 	for triad in name_coordinates_icon_set:
